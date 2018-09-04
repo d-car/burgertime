@@ -2,10 +2,10 @@ var express = require("express");
 
 var router = express.Router();
 
-var burgers = require("../models/burger.js");
+var burger = require("../models/burger.js");
 
 router.get("/", function (req, res) {
-    burgers.all(function(data) {
+    burger.all(function(data) {
         var burgerObject = {
             burgers: data
         };
@@ -13,3 +13,7 @@ router.get("/", function (req, res) {
         res.render("index", burgerObject);
     });
 });
+
+
+
+module.exports = router;

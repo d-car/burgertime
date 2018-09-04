@@ -21,7 +21,7 @@ function objToSql(ob) {
 
 //begin orm functions
 var orm = {
-    //orm all function, will run this query for root
+    //orm all method, will run this query for root
     all: function(tableInput, cb)  {
         var queryString = "SELECT * FROM" + tableInput + ";";
         connection.query(queryString, function(err, result) {
@@ -31,7 +31,7 @@ var orm = {
             cb(result);
         });
     },
-    //orm create function. Run this query when adding new burger to db. break it up by line to make it easier to read
+    //orm create method. Run this query when adding new burger to db. break it up by line to make it easier to read
     create: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
         queryString += " (";
@@ -56,3 +56,6 @@ var orm = {
 
     
 }
+
+// Export the orm object for the model (cat.js).
+module.exports = orm;
