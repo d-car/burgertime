@@ -1,0 +1,13 @@
+<h1>Burger Time</h1>
+
+<h2>Take a look at our current menu. If you don't see anything you like, add it yourself and munch!</h2>
+
+<h3>Menu</h3>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burgers-block devour=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
