@@ -9,14 +9,14 @@ $(function() {
       };
   
       // Send the PUT request.
-      $.ajax("/api/burgers/" + id, {
+      $.ajax("/api/burger/" + id, {
         type: "PUT",
         data: newDevouredState
       }).then(
         function() {
           console.log("changed burger to", newDevoured);
           // Reload the page to get the updated list
-          location.reload();
+          // location.reload();
         }
       );
     });
@@ -31,7 +31,7 @@ $(function() {
       };
   
       // Send the POST request.
-      $.ajax("/api/cats", {
+      $.ajax("/api/burger/", {
         type: "POST",
         data: newCat
       }).then(
