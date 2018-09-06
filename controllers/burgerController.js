@@ -4,32 +4,28 @@ var router = express.Router();
 
 var burger = require("../models/burger.js");
 
-router.get("/api/burgers", function (req, res) {
-    res.json(burgers)
-});
-
 router.get("/", function (req, res) {
     burger.all(function(data) {
-        var burgerObject = {
+        var hbsObject = {
             burgers: data
         };
-        console.log(burgerObject);
-        res.render("index", burgerObject);
+        console.log(hbsObject);
+        res.render("index", hbsObject);
     });
 });
 
-router.post("/api/burgers", function(req, res) {
+router.post("/burgers", function(req, res) {
     burger.create([
-        "burger_name", "devoured"
+        "burger_name"
     ], [
-        req.body.burger_name, req.body.devoured
+        req.body.burger_name
     ], function(result) {
         // Send back the ID of the new quote
         res.json({ id: result.insertId });
     });
 });
 
-router.put("/api/burgers/:id", function(req, res) {
+router.put("/burgers/:id", function(req, res) {
     var condition = "id = " + req.params.id;
 
     console.log("condition", condition);

@@ -1,6 +1,6 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-devoured").on("click", function(event) {
+    $("#eatButton").on("click", function(event) {
         console.log("clicked BT buton");
       var id = $(this).data("id");
       var newDevoured = $(this).data("newdevoured");

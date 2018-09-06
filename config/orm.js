@@ -31,9 +31,9 @@ function objToSql(ob) {
     return arr.toString();
 }
 
-//begin orm functions
+//begin orm functions to perform mySQL queries
 var orm = {
-    //orm all method, will run this query for root
+    //orm all method, will run this query for all table entries
     all: function(tableInput, cb)  {
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, result) {
