@@ -9,7 +9,7 @@ Follow this link to use the app: HEROKU LINK
 
 # Running the App
 - Once loaded, look over the burger menu
-- If there's a burger you'd like to eat, click the "Burger Time!" button.
+- If there's a burger you'd like to eat, click the "It's Burger Time!" button.
     - This will change the state of the burger in the database to "devoured=true".
 - You can add a burger to that isn't listed to the database by typing the name in the text box and clicking "Add Burger".
 - Click the "Delete All Burgers" button to clear out the database of all burgers.
