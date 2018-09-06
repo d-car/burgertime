@@ -6,6 +6,7 @@ Follow this link to use the app: HEROKU LINK
 
 # Prerequisites
 - Node.js
+- mySQL
 
 # Running the App
 - Once loaded, look over the burger menu
@@ -20,9 +21,13 @@ If you'd like to run a local verison of the app, follow these steps:
 
 - Install dependencies by typing "npm i" in your terminal.
 
+- Use the schema.sql and seeds.sql files located in the "db" directory to create and populate the database.
+
 - Run "node server.js" in terminal.
 
 - Navigate to "http://localhost:8080" in your browser
+
+- Follow the steps outlined in "Running the App"
 
 # Tech Utilized
 - Node.js
