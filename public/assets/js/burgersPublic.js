@@ -1,15 +1,14 @@
 $(function() {
-    $("#eatButton").on("click", function(event) {
-        console.log("clicked BT buton");
+    $(".btn-success").on("click", function(event) {
       var id = $(this).data("id");
       var newDevoured = $(this).data("newdevoured");
   
       var newDevouredState = {
-        devoured: newDevoured
+        devoured: true
       };
   
       // Send the PUT request.
-      $.ajax("/api/burger/" + id, {
+      $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newDevouredState
       }).then(
