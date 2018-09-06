@@ -34,16 +34,6 @@ var orm = {
             cb(result);
         });
     },
-    allOrder: function(table, orderCol, cb) {
-        var queryString = "SELECT * FROM " + table + " ORDER BY " + orderCol;
-        
-        connection.query(queryString, function(err, result) {
-            if (err) {
-                throw err;
-            }
-            cb(result);
-        });
-    },
     create: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table + " (" + cols.toString() + ") VALUES (" + printQuestionMarks(vals.length) + ")"
 
@@ -67,6 +57,19 @@ var orm = {
             cb(result);
         });
     },
+    delete: function(table, condition, cb) {
+        var queryString = "DELETE FROM " + table;
+
+        queryString += " WHERE ";
+        queryString += condition;
+
+        connection.query(queryString, function(err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        });
+    }
 };
 
 // Export the orm object for the model (burger.js).
