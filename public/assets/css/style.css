@@ -1,0 +1,11 @@
+body {
+    background: yellow;
+}
+
+.col-sm-12 {
+    margin: auto;
+}
+
+.jumbotron {
+    background: white;
+}
