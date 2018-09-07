@@ -17,16 +17,17 @@
     </div>
   </div>
 </div>
+<br><br>
 <div class="container">
   <div class="row">
     <div class="center col-sm-12" id="menu">
       <h2>Menu</h2>
     </div>
   </div>
-
+<br><br>
   <div class="row">
-    <div class="center col-sm-3">
-      <h3>Available:</h3>  
+    <div class="center col-sm-3" id="bAva">
+      <h3 id="avaLabel">Available:</h3>  
         <ul>
           {{#each burgers}}
             {{#unless devoured}}
@@ -38,8 +39,8 @@
         </ul>
     </div>
 
-    <div class="center col-sm-3">
-      <h3>Devoured:</h3>
+    <div class="center col-sm-3" id="bDev">
+      <h3 id="devLabel">Devoured:</h3>
         <ul>
         {{#each burgers}}
           {{#if devoured}}
@@ -50,15 +51,17 @@
     </div>
   </div>
 </div>
-<div class="container">
+<br><br>
+<div class="container" id="formContainer">
   <div class="row">
     <div class="col-sm-6">
-      <h3>Whaddaya Want?</h3>
+      <h3 id="bFormTitle">Whaddaya Want?</h3>
     </div>
   </div>
+  <br><br>
   <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-      <form class="create-form">
+    <div class="col-sm-8">
+      <form class="create-form" id="bForm">
         <div class="form-group">
           <label for="bName">Your Burger Desire:</label>
           <input type="text" id="bName" name="name">

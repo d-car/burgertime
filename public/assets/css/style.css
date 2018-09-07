@@ -1,11 +1,75 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: yellow;
+}
+
 .jumbotron {
+    margin-top: 25px;
     background: white;
+    border-radius: 25px;
+}
+
+.col-sm-3 {
+    background: white;
+    border-radius: 25px;
 }
 
 #burgerPic {
-    margin-left: 50%;
+    position: relative;
+    left: 375px;
 }
 
 #menu {
-    margin-left: 50%;
+    position: relative;
+    left: 512px;
+    text-decoration: underline;
+}
+
+#bAva {
+    position: relative;
+    left: 200px;
+    padding: 10px
+}
+
+#avaLabel {
+    position: relative;
+    left: 70px;
+}
+
+#devLabel {
+    position: relative;
+    left: 60px;
+}
+
+#bDev {
+    position: relative;
+    left: 370px;
+}
+
+#formContainer {
+    background: white;
+    border-radius: 25px;
+}
+
+#bFormTitle {
+    position: relative;
+    left: 400px;
+    padding: 10px;
+}
+
+#bForm {
+    position: relative;
+    left: 375px;
+    padding: 10px;
+
+}
+
+#copyright {
+    position: relative;
+    left: 450px;
+
 }
